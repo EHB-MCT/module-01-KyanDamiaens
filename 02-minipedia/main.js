@@ -9,11 +9,35 @@ let subtitleFR = "Un fruit délicieux";
 let textFR = "La pomme est un fruit comestible produit par un pommier. Les pommes sont riches en fibres et en vitamine C. Il existe des milliers de variétés, allant du vert et jaune au rouge foncé.";
 
 // 1. Select text elements
+let titleElement = document.querySelector("#title");
+let subtitleElement = document.querySelector("#subtitle");
+let textElement = document.querySelector("#text");
 
 //2. Set initial content on load
+titleElement.textContent = titleNL;
+subtitleElement.textContent = subtitleNL;
+textElement.textContent = textNL;
 
 //3. Select buttons
+let dutchBtn =document.querySelector("#dutch-btn");
+let frenchBtn = document.querySelector("#french-btn");
 
 //4. Add event listeners
+frenchBtn.addEventListener("click", function() {
+    titleElement.textContent = titleFR;
+    subtitleElement.textContent = subtitleFR;
+    textElement.textContent = textFR;
+});
+
+
+dutchBtn.addEventListener("click", function() {
+    titleElement.textContent = titleNL;
+    subtitleElement.textContent = subtitleNL;
+    textElement.textContent = textNL;
+});
+
+
 
 //5. Create, configure and append image
+
+
