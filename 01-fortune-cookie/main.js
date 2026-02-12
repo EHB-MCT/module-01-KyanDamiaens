@@ -19,6 +19,13 @@ let button = document.querySelector("#cookie-btn");
 
 // 2. Add event Listener
 //      generate a random index
+button.addEventListener("click", function() {
+    let randomIndex = Math.floor(Math.random() * fortunes.length);
+
+    let selectedfortune = fortunes[randomIndex];
+    
+    display.textContent = selectedfortune;
+});
 //      get the fortune string
 //      update the display
 
