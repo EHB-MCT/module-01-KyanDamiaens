@@ -47,5 +47,5 @@ img.src = "./appel.jpg";
 img.alt = "image of an apple";
 img.width = 300;
 
-title.insertAdjacentElement("afterend", img);
+document.querySelector(".article").prepend(img);    
 
