@@ -9,35 +9,43 @@ let subtitleFR = "Un fruit délicieux";
 let textFR = "La pomme est un fruit comestible produit par un pommier. Les pommes sont riches en fibres et en vitamine C. Il existe des milliers de variétés, allant du vert et jaune au rouge foncé.";
 
 // 1. Select text elements
-let titleElement = document.querySelector("#title");
-let subtitleElement = document.querySelector("#subtitle");
-let textElement = document.querySelector("#text");
+let title = document.querySelector("#title");
+let subtitle = document.querySelector("#subtitle");
+let text = document.querySelector("#text");
 
 //2. Set initial content on load
-titleElement.textContent = titleNL;
-subtitleElement.textContent = subtitleNL;
-textElement.textContent = textNL;
+title.textContent = titleNL;
+subtitle.textContent = subtitleNL;
+text.textContent = textNL;
 
 //3. Select buttons
-let dutchBtn =document.querySelector("#dutch-btn");
-let frenchBtn = document.querySelector("#french-btn");
+let btnNl =document.querySelector("#btn-nl");
+let btnFr = document.querySelector("#btn-fr");
 
 //4. Add event listeners
-frenchBtn.addEventListener("click", function() {
-    titleElement.textContent = titleFR;
-    subtitleElement.textContent = subtitleFR;
-    textElement.textContent = textFR;
+btnFr.addEventListener("click", function() {
+
+    title.textContent = titleFR;
+    subtitle.textContent = subtitleFR;
+    text.textContent = textFR;
 });
 
 
-dutchBtn.addEventListener("click", function() {
-    titleElement.textContent = titleNL;
-    subtitleElement.textContent = subtitleNL;
-    textElement.textContent = textNL;
+btnNl.addEventListener("click", function() {
+
+    title.textContent = titleNL;
+    subtitle.textContent = subtitleNL;
+    text.textContent = textNL;
 });
 
 
 
 //5. Create, configure and append image
+let img = document.createElement("img");
 
+img.src = "./appel.jpg";
+img.alt = "image of an apple";
+img.width = 300;
+
+title.insertAdjacentElement("afterend", img);
 
